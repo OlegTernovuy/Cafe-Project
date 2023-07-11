@@ -1,0 +1,57 @@
+.container {
+  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  /* position: relative; */
+}
+
+.backPhoto {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  /* position: absolute; */
+  z-index: -1;
+}
+
+.intro_inner > h3 {
+    position: absolute;
+  color: #fff;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 140%;
+  bottom: 150px;
+left: 260px;
+z-index: 1;
+}
+
+@media (max-width: 992px) {
+    .intro_inner > h3 {
+        font-size: 22px;
+        bottom: 200px;
+        left: 10px;
+    }
+  }
+
+.intro_inner:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  background: linear-gradient(
+    0deg,
+    rgba(51, 51, 51, 0.4),
+    rgba(51, 51, 51, 0.4)
+  );
+  opacity: 0.8;
+}

@@ -1,0 +1,5 @@
+.foodMenu {
+    background-color: aqua;
+    /*footer to bottom*/
+    min-height: calc(100vh - 800px);
+}

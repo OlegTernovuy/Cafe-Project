@@ -1,0 +1,92 @@
+.cafeInfo {
+  max-width: 70%;
+  margin-top: 150px;
+  margin-left: 312px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+@media (max-width: 992px) {
+    .cafeInfo {
+        max-width: 100%;
+        margin-left: 0px;
+        margin-top: 50px;
+        display:inline-block;
+    }
+  }
+
+.cafe-info-title {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #333333;
+
+  display: flex;
+  vertical-align:middle;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 992px) {
+    .cafe-info-title {
+        position:static;
+        margin-left: 20px;
+    }
+  }
+
+.cafe-info-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #b59571;
+  opacity: 1;
+  margin-left: 30px;
+}
+
+h1 {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 120%;
+
+margin-left: 220px;
+margin-top: 80px;
+}
+
+@media (max-width: 992px) {
+    h1 {
+        margin-left: 0px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        font-size: 34px;
+    }
+  }
+
+p {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  margin-top: 80px;
+  margin-left: 60px;
+  
+}
+
+@media (max-width: 992px) {
+    p {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 40px;
+    }
+  }

@@ -1,0 +1,94 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding-top: 30px;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.headerMenu {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+  align-items: center;
+}
+
+.headerLink {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hamburger {
+  outline: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* .leftLogo {
+  display: flex;
+  flex-direction: column;
+} */
+
+@media (max-width: 992px) {
+    .headerMenu {
+      margin: 0;
+      justify-content: flex-start;
+    }
+  }
+
+.headerMenu li {
+  list-style: none;
+  margin-right: 50px;
+}
+
+@media (max-width: 992px) {
+    .headerMenu li {
+        margin-right: 20px;
+    }
+  }
+
+.headerMenu li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.headerMenu li a:hover {
+    color: #d8bc9b;
+    transition: color 0.1s linear;
+}
+
+.reservBtn {
+  background: #b59571;
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  /* margin-right: 50px; */
+}
+
+.reservBtn:hover {
+    background: #ffffff;
+    color: #b59571;
+    transition: color 0.2s linear;
+}
+
+@media (max-width: 992px) {
+    .headerLink {
+        display: none;
+    }
+  }
