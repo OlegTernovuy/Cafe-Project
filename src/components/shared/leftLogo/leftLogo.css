@@ -4,16 +4,20 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-    background-color: #333333;;
-    width: 8%;
+    background-color: #333333;
+    width: 6%;
     height: 100vh;
-    position: absolute;
     z-index: 1000000;
 }
 
 .logoOnTop {
     padding-top: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .logoOnTop img {
@@ -23,7 +27,7 @@
 .logoAnBottom {
     padding-bottom: 30px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
     /* font-size: 20px; */
 }
@@ -32,3 +36,18 @@
     height: 60px;
     width: 60px;
 }
+
+@media (max-width: 992px) {
+    .logoAnBottom {
+        display: none;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .leftLogo, .logoOnTop {
+        padding-top: 0;
+        display: flex;
+        width: 0%;
+        height: 0vh;
+    }
+  }

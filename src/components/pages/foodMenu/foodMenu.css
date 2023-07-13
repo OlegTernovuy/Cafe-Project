@@ -1,5 +1,10 @@
-.foodMenu {
-    background-color: aqua;
-    /*footer to bottom*/
-    min-height: calc(100vh - 800px);
+.wrapperMenu {
+    margin-left: 6%;
+    padding: 0 6%;
 }
+
+@media (max-width: 992px) {
+    .wrapperMenu {
+        margin-left: 0;
+    }
+  }

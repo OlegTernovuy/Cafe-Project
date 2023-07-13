@@ -30,8 +30,8 @@ const { showNavigateModal, handleHideNavigateModal, handleShowNavigateModal } = 
             </button>
         </div>
         <div className='logoAnBottom'>
-            <img src={telegram} alt="telegram" />
-            <img src={youtube} alt="telegram" />
+            <a href='https://web.telegram.org/a/' target='_blank'><img src={telegram} alt="telegram" /></a>
+            <a href='https://www.youtube.com' target='_blank'><img src={youtube} alt="telegram" /></a>
         </div>
     </div>
   )

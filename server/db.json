@@ -2,21 +2,59 @@
 {"breakfast": [
   {
     "id": 1,
-    "productName": "IPhone",
-    "price": 999.0,
-    "productImage": "./assets/1.png"
+    "title": "Омлет глазурний",
+    "price": 150,
+    "weight": 400,
+    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
   },
   {
     "id": 2,
-    "productName": "Macbook Pro 2022 (M1)",
-    "price": 1999.0,
-    "productImage": "./assets/2.png"
+    "title": "Домашні сирники",
+    "price": 170,
+    "weight": 250,
+    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
   },
   {
     "id": 3,
-    "productName": "Cannon M50 Camera",
-    "price": 699.0,
-    "productImage": "./assets/3.png"
+    "title": "Млинці",
+    "price": 120,
+    "weight": 130,
+    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Каша з ягодами та кедровими горіхами",
+    "price": 160,
+    "weight": 150,
+    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Скрембл",
+    "price": 180,
+    "weight": 110,
+    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Яйце Бенедикт з лососем",
+    "price": 220,
+    "weight": 140,
+    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Гречана каша з авокадо",
+    "price": 160,
+    "weight": 350,
+    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Кобб - салат з креветками",
+    "price": 230,
+    "weight": 380,
+    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
   }
 ]
 }

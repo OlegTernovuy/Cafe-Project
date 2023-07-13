@@ -6,9 +6,9 @@ import { Link } from "react-scroll";
 
 export const Footer = () => {
   return (
-    <footer className="mainFooter">
+    <footer>
       <FooterMap/>
-      <div className="footer">
+      <div className="footerInfo">
         <Link to='home' smooth={true} offset={-700} duration={700}><img src={food} alt="food" /></Link>
         <p>Політика конфіденційності</p>
         <p>Виконав Ternovuy</p>
