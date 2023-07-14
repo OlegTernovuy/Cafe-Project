@@ -10,7 +10,9 @@ export const HeaderMenu = () => {
       <div className="HeaderMenuLogo">
       <Link to="/foodMenu">Menu</Link>
         <button>
-          <img src={shoppingBasket} alt="shoppingBasket" />
+          <Link to="*/bag">
+            <img src={shoppingBasket} alt="shoppingBasket" />
+          </Link>
         </button>
       </div>
     </div>

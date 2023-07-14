@@ -1,60 +1,198 @@
 
-{"breakfast": [
+{"menu": [
   {
     "id": 1,
     "title": "Омлет глазурний",
     "price": 150,
     "weight": 400,
-    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
   },
   {
     "id": 2,
     "title": "Домашні сирники",
     "price": 170,
     "weight": 250,
-    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
   },
   {
     "id": 3,
     "title": "Млинці",
     "price": 120,
     "weight": 130,
-    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
   },
   {
     "id": 4,
     "title": "Каша з ягодами та кедровими горіхами",
     "price": 160,
     "weight": 150,
-    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
   },
   {
     "id": 5,
     "title": "Скрембл",
     "price": 180,
     "weight": 110,
-    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
   },
   {
     "id": 6,
     "title": "Яйце Бенедикт з лососем",
     "price": 220,
     "weight": 140,
-    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
   },
   {
     "id": 7,
     "title": "Гречана каша з авокадо",
     "price": 160,
     "weight": 350,
-    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
   },
   {
     "id": 8,
     "title": "Кобб - салат з креветками",
     "price": 230,
     "weight": 380,
-    "productImage": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg"
+  }
+],
+"categories": [
+  {
+    "title": "Сніданки",
+    "path": "breacfast"
+  },
+  {
+    "title": "Raw",
+    "path": "raw"
+  },
+  {
+    "title": "Холодні закуски",
+    "path": "ColdSnacks"
+  },
+  {
+    "title": "Брускети",
+    "path": "Bruschetta"
+  },
+  {
+    "title": "Салати",
+    "path": "raw"
+  },
+  {
+    "title": "Супи",
+    "path": "raw"
+  },
+  {
+    "title": "М'ясо",
+    "path": "raw"
+  },
+  {
+    "title": "Риба",
+    "path": "raw"
+  },
+  {
+    "title": "Мангал",
+    "path": "raw"
+  },
+  {
+    "title": "Гарніри",
+    "path": "raw"
+  }  
+],
+"breacfast": [
+  {
+    "id": 1,
+    "title": "Омлет глазурний",
+    "price": 150,
+    "weight": 400,
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg",
+    "category": "Сніданки"
+  },
+  {
+    "id": 2,
+    "title": "Домашні сирники",
+    "price": 170,
+    "weight": 250,
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg",
+    "category": "Сніданки"
+  },
+  {
+    "id": 3,
+    "title": "Млинці",
+    "price": 120,
+    "weight": 130,
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg",
+    "category": "Сніданки"
+  },
+  {
+    "id": 4,
+    "title": "Каша з ягодами та кедровими горіхами",
+    "price": 160,
+    "weight": 150,
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg",
+    "category": "Сніданки"
+  },
+  {
+    "id": 5,
+    "title": "Скрембл",
+    "price": 180,
+    "weight": 110,
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg",
+    "category": "Сніданки"
+  },
+  {
+    "id": 6,
+    "title": "Яйце Бенедикт з лососем",
+    "price": 220,
+    "weight": 140,
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg",
+    "category": "Сніданки"
+  },
+  {
+    "id": 7,
+    "title": "Гречана каша з авокадо",
+    "price": 160,
+    "weight": 350,
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg",
+    "category": "Сніданки"
+  },
+  {
+    "id": 8,
+    "title": "Кобб - салат з креветками",
+    "price": 230,
+    "weight": 380,
+    "image": "https://travel-tours.com.ua/wp-content/uploads/2017/01/special-menu.jpg",
+    "category": "Сніданки"
+  }
+],
+"raw": [
+  {
+    "id": 1,
+    "title": "hot dog",
+    "price": 150,
+    "weight": 400,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Hot_dog_on_a_plate_-_Evan_Swigart.jpg/2560px-Hot_dog_on_a_plate_-_Evan_Swigart.jpg",
+    "category": "Raw"
+  }
+],
+"Bruschetta": [
+  {
+    "id": 1,
+    "title": "Bruschetta",
+    "price": 150,
+    "weight": 400,
+    "image": "https://www.jessicagavin.com/wp-content/uploads/2020/07/bruschetta-17-1200-500x375.jpg",
+    "category": "Raw"
+  }
+],
+"ColdSnacks": [
+  {
+    "id": 1,
+    "title": "Cold Snacks",
+    "price": 150,
+    "weight": 400,
+    "image": "https://thumbs.dreamstime.com/b/cold-snacks-table-buffet-canapes-banquet-134079610.jpg",
+    "category": "Raw"
   }
 ]
 }

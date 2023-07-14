@@ -10,6 +10,13 @@ import { useContext } from "react";
 import { ModalContext } from "./components/providers/ModalProvider";
 import { ReservTableModal } from "./components/shared/reservTable/ReservTableModal";
 import ScrollToTop from "./features/ScrollToTop";
+import { CategoryProducts } from "./components/shared/CategoryProducts/CategoryProducts";
+import { Bag } from "./components/shared/Bag/Bag";
+
+export const url = 'https://fakestoreapi.com/products';
+
+//Local Server
+// export const url = 'http://localhost:3001/menu'
 
 function App() {
   const { showReservTableModal, handleHideReservTableModal } =
@@ -25,7 +32,9 @@ function App() {
       <Routes>
         <Route index element={<MainCafe />} />
         <Route path="/foodMenu/*" element={<FoodMenu />} />
+        {/* <Route path="/bag" element={<Bag/>}/> */}
         <Route path="/delivery" element={<Delivery />} />
+        {/* <Route path="/categories/:name" element={<CategoryProducts />}/> */}
       </Routes>
       <Footer />
       <ScrollToTop/>
