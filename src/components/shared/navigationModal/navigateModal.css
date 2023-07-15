@@ -1,58 +1,58 @@
 .navModal {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-  
-    background-color: #333333;
-    width: 100%;
-    height: 100%;
-  
-    text-align: center;
-    padding-top: 50px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  background-color: #333333;
+  width: 100%;
+  height: 100%;
 
-  .hidenBtn {
-    padding-top: 32px;
-    border: none;
+  text-align: center;
+  padding-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidenBtn {
+  padding-top: 32px;
+  border: none;
   background-color: unset;
-  }
+}
 
+.navModal li {
+  list-style: none;
+  margin-right: 50px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.navModal ul {
+  margin-top: 80px;
+}
+
+@media (max-width: 992px) {
   .navModal li {
-    list-style: none;
-    margin-right: 50px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-right: 20px;
   }
+}
 
-  .navModal ul {
-    margin-top: 80px;
-  }
-  
-  @media (max-width: 992px) {
-      .navModal li {
-          margin-right: 20px;
-      }
-    }
-  
-  .navModal li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 40px;
-  }
-  
-  .navModal li a:hover {
-      color: #d8bc9b;
-      transition: color 0.1s linear;
-  }
+.navModal li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 40px;
+}
 
-  .reservedBtn {
-    background: #b59571;
+.navModal li a:hover {
+  color: #d8bc9b;
+  transition: color 0.1s linear;
+}
+
+.reservedBtn {
+  background: #b59571;
   border: none;
   color: #ffffff;
   text-decoration: none;
@@ -64,4 +64,4 @@
   font-size: 16px;
   line-height: 140%;
   width: 200px;
-  }
+}

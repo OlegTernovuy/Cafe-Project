@@ -19,7 +19,7 @@
 }
 
 .intro_inner > h3 {
-    position: absolute;
+  position: absolute;
   color: #fff;
   font-family: "Circe";
   font-style: normal;
@@ -27,17 +27,17 @@
   font-size: 54px;
   line-height: 140%;
   bottom: 150px;
-left: 260px;
-z-index: 1;
+  left: 260px;
+  z-index: 1;
 }
 
 @media (max-width: 992px) {
-    .intro_inner > h3 {
-        font-size: 22px;
-        bottom: 200px;
-        left: 10px;
-    }
+  .intro_inner > h3 {
+    font-size: 22px;
+    bottom: 200px;
+    left: 10px;
   }
+}
 
 .intro_inner:after {
   content: "";

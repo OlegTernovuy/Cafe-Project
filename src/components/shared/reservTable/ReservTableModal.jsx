@@ -46,7 +46,7 @@ export const ReservTableModal = ({ handleHideReservTableModal }) => {
     };
     console.log(reserv);
     handleHideReservTableModal();
-    alert('Чекаємо на вас');
+    alert("Чекаємо на вас");
   };
 
   return (

@@ -44,9 +44,6 @@
   "devDependencies": {
     "axios": "^1.4.0",
     "concurrently": "^8.2.0",
-    "json-server": "^0.17.3",
-    "react-input-number": "^5.0.19",
-    "react-numeric-input": "^2.2.3",
-    "rsuite": "^5.37.0"
+    "json-server": "^0.17.3"
   }
 }

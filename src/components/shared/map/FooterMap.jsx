@@ -9,7 +9,7 @@ import { useContext } from "react";
 import { ModalContext } from "../../providers/ModalProvider";
 
 export const FooterMap = () => {
-  const {handleShowReservTableModal} = useContext(ModalContext)
+  const { handleShowReservTableModal } = useContext(ModalContext);
 
   const timeDelivery = footerMap.map((item) => {
     return (
@@ -32,7 +32,9 @@ export const FooterMap = () => {
       <div className="wrapperMap">
         <div className="deliveryTime">{timeDelivery}</div>
         {/* <div className="map"><GoogleMap location={location} zoomLevel={17}/></div> */}
-        <div className="map"><img className="maps" src={maps} alt="map" /></div>
+        <div className="map">
+          <img className="maps" src={maps} alt="map" />
+        </div>
         <div className="workSchedule">
           <div className="location">
             <img src={locations} alt="location" height={20} width={20} />
@@ -45,7 +47,9 @@ export const FooterMap = () => {
           <p className="schdule">Графік роботи</p>
           <p className="schdule">Пн-Чт з 09:00 до 22:00</p>
           <p className="schdule">Пт-Нд з 10:00 до 23:00</p>
-          <button onClick={handleShowReservTableModal} className="reservBtn">Забронювати столик</button>
+          <button onClick={handleShowReservTableModal} className="reservBtn">
+            Забронювати столик
+          </button>
         </div>
       </div>
     </div>

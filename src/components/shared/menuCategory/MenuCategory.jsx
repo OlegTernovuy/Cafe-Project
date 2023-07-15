@@ -10,7 +10,9 @@ export const MenuCategory = ({ cards = [] }) => {
         {cards?.map((card) => {
           return (
             <li key={card}>
-              <NavLink to={`*/categories/${card}`}>{card || 'Example Product'}</NavLink>
+              <NavLink to={`*/categories/${card}`}>
+                {card || "Example Product"}
+              </NavLink>
             </li>
           );
         })}
@@ -18,7 +20,6 @@ export const MenuCategory = ({ cards = [] }) => {
     </div>
   );
 };
-
 
 //Local Server
 // <NavLink to={`*/${card.path}`}>{card.title || 'Example Product'}</NavLink>

@@ -1,7 +1,7 @@
 import React from "react";
-import './infoBlock.css'
+import "./infoBlock.css";
 
-export const InfoBlock = ({title, heading, desc}) => {
+export const InfoBlock = ({ title, heading, desc }) => {
   return (
     <div className="cafeInfo">
       <h2 className="cafe-info-title">{title}</h2>
@@ -10,4 +10,3 @@ export const InfoBlock = ({title, heading, desc}) => {
     </div>
   );
 };
-

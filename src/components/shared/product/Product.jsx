@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
 import "./product.css";
-import { url } from '../../../App.js'
+import { url } from "../../../App.js";
+import { handleCart } from "../../../features/HandleCard";
 
 export const Product = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
+  const [amount, setAmount] = useState(1);
 
   useEffect(() => {
     // eslint-disable-next-line
@@ -14,6 +16,11 @@ export const Product = () => {
       setProduct(response.data);
     });
   }, []);
+
+  const handleAmountChange = (e) => {
+    setAmount(Number(e.target.value));
+  };
+  // console.log('amount', amount, typeof(amount));
 
   if (!Object.keys(product).length > 0) return <div>Product Not Found</div>;
   return (
@@ -31,13 +38,24 @@ export const Product = () => {
           </p>
           <p className="numberOfServings">Кількість порцій:</p>
           <div className="buyDishes">
-            <input type="number" className="numberofDishes" min={1} max={50} step={1} />
-            <button className="addToBasket">В корзину</button>
+            <input
+              type="number"
+              className="numberofDishes"
+              min={1}
+              max={50}
+              step={1}
+              value={amount}
+              onChange={handleAmountChange}
+            />
+            <button
+              className="addToBasket"
+              onClick={() => handleCart(product, amount)}
+            >
+              В корзину
+            </button>
           </div>
         </div>
       </div>
     </div>
   );
 };
-
-// export default Product

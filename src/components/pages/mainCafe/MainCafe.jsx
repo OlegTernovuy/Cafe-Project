@@ -17,13 +17,11 @@ export const MainCafe = () => {
   });
   return (
     <>
-    <Header/>
-    <div>
-      <HeroSection />
+      <Header />
       <div>
-        {homeInfo}
+        <HeroSection />
+        <div>{homeInfo}</div>
       </div>
-    </div>
     </>
   );
 };

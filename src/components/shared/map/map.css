@@ -70,13 +70,13 @@
 }
 
 @media (max-width: 992px) {
-    .workSchedule {
-        position: static;
-        width: 100%;
-        margin-top: 5px;
-        padding: 5px 0;
-    }
+  .workSchedule {
+    position: static;
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px 0;
   }
+}
 
 .workSchedule p {
   font-family: "Circe";
@@ -87,33 +87,33 @@
 }
 
 .location {
-    display: flex;
-    margin: 24px 40px;
+  display: flex;
+  margin: 24px 40px;
 }
 
 .location h3 {
-    font-family: "Circe";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 140%;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
 }
 
 .location img {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .location a {
-    text-decoration: none;
-    color: #ffffff;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .schdule {
-    margin: 24px 40px;
+  margin: 24px 40px;
 }
 
 .workSchedule button {
-    margin: 0 auto 24px;
-    display: flex;
-    justify-content: center;
+  margin: 0 auto 24px;
+  display: flex;
+  justify-content: center;
 }

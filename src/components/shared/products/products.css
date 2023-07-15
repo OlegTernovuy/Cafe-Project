@@ -22,6 +22,10 @@
   }
 }
 
+.card a {
+  text-decoration: none;
+}
+
 .card img {
   width: 304px;
   height: 220px;
@@ -72,28 +76,27 @@
 }
 
 .addToBasket {
-width: 113px;
-height: 42px;
-background: #B59571;
+  width: 113px;
+  height: 42px;
+  background: #b59571;
 
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-border: none;
-cursor: pointer;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  border: none;
+  cursor: pointer;
 
-font-family: 'Circe';
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 140%;
-/* or 22px */
-text-align: center;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  text-align: center;
 
-/* white */
-color: #FFFFFF;
-
+  /* white */
+  color: #ffffff;
 }
 
 /* @media (max-width: 992px) {
@@ -102,14 +105,13 @@ color: #FFFFFF;
   }
 } */
 
-
 .priceAndBasket {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-    left: 0;
-    bottom: 30px;
+  left: 0;
+  bottom: 30px;
 }
