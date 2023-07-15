@@ -3,7 +3,7 @@ import { MainCafe } from "./components/pages/mainCafe/MainCafe";
 import { FoodMenu } from "./components/pages/foodMenu/FoodMenu";
 import { Delivery } from "./components/pages/delivery/Delivery";
 import { Footer } from "./components/layout/footer/Footer";
-import { LeftLogo } from "./components/shared/leftLogo/LeftLogo";
+import { LeftLogo } from "./components/layout/leftLogo/LeftLogo";
 import "./index.css";
 
 import { useContext } from "react";

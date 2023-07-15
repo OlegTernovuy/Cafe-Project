@@ -3,13 +3,13 @@ import { Routes, Route } from "react-router-dom";
 
 import axios from "axios";
 import "./foodMenu.css";
-import { HeaderMenu } from "../../shared/menuHeader/HeaderMenu";
 import { MenuCategory } from "../../shared/menuCategory/MenuCategory";
 import { Products } from "../../shared/products/Products";
 import { Product } from "../../shared/product/Product";
 import { url } from "../../../App.js";
 import { CategoryProducts } from "../../shared/CategoryProducts/CategoryProducts";
 import { Bag } from "../../shared/Bag/Bag";
+import { HeaderMenu } from "../../layout/menuHeader/HeaderMenu";
 
 export const FoodMenu = () => {
   const [products, setProducts] = useState([]);
