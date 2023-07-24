@@ -10,6 +10,7 @@ import { useContext } from "react";
 import { ModalContext } from "./components/providers/ModalProvider";
 import { ReservTableModal } from "./components/shared/reservTable/ReservTableModal";
 import ScrollToTop from "./features/ScrollToTop";
+import { useSelector } from "react-redux";
 
 export const url = "https://fakestoreapi.com/products";
 
@@ -19,6 +20,8 @@ export const url = "https://fakestoreapi.com/products";
 function App() {
   const { showReservTableModal, handleHideReservTableModal } =
     useContext(ModalContext);
+  const cartItems = useSelector((state) => state.cart.itemsList);
+  console.log(cartItems);
   return (
     <div className="App">
       {showReservTableModal && (

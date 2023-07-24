@@ -1,46 +1,45 @@
 import React, { useEffect, useState } from "react";
 import "./bag.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addToCart,
+  deleteFromCart,
+  removeFromCart,
+} from "../../../redux/cartSlice";
 
 export const Bag = () => {
-  const navigate = useNavigate();
 
-  const carts = JSON.parse(localStorage.getItem("cart")) || [];
+  const dispatch = useDispatch();
 
-  const [totalPrice, setTotalPrice] = useState(0);
+  const itemsList = useSelector((state) => state.cart.itemsList);
 
-  useEffect(() => {
-    const total = carts.reduce((acc, item) => {
-      return acc + item.price * item.quantity;
-    }, 0);
-    setTotalPrice(total);
-  }, [carts]);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
-  const handleDec = (id) => {
-    const index = carts.findIndex((cart) => cart.id === id);
-    if (carts[index].quantity > 1) {
-      carts[index].quantity--;
-      localStorage.setItem("cart", JSON.stringify(carts));
-      navigate("/foodMenu/*/bag");
-    }
+  let totalCost = 0;
+
+  itemsList.forEach((item) => {
+    totalCost += item.totalPrice;
+  });
+
+  const handleInc = (product) => {
+    dispatch(
+      addToCart({
+        id: product.id,
+        name: product.title,
+        price: product.price,
+        image: product.image,
+        category: product.category,
+      })
+    );
   };
 
-  const handleInc = (id) => {
-    const index = carts.findIndex((cart) => cart.id === id);
-    carts[index].quantity++;
-    localStorage.setItem("cart", JSON.stringify(carts));
-    navigate("/foodMenu/*/bag");
+  const handleDec = (id) => {
+    dispatch(removeFromCart(id));
   };
 
   const removeProduct = (id) => {
-    const index = carts.findIndex((cart) => cart.id === id);
-    carts.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(carts));
-    navigate("/foodMenu/*/bag");
-  };
-
-  const promoCode = () => {
-    setTotalPrice(totalPrice * 0.9);
+    dispatch(deleteFromCart(id));
   };
 
   // if(!carts.length) return <div>Cart is Empty</div>
@@ -51,7 +50,7 @@ export const Bag = () => {
         <div className="items">
           <div className="ProductsTitle">
             <h2>Shopping Cart</h2>
-            <p>{carts?.length} Items</p>
+            <p>{totalQuantity} Items</p>
           </div>
           <div className="ProductDetail">
             <div className="ProductDetailHeader">
@@ -61,7 +60,7 @@ export const Bag = () => {
               <h3 style={{ width: "20%" }}>TOTAL</h3>
             </div>
 
-            {carts.map((cart) => {
+            {itemsList.map((cart) => {
               return (
                 <div className="itemInBag" key={cart?.id}>
                   <div className="fitemInBagWrapper">
@@ -69,7 +68,7 @@ export const Bag = () => {
                       <img src={cart?.image} alt={"breakfast"} />
                     </div>
                     <div className="productDesc">
-                      <span className="prodTitle">{cart?.title}</span>
+                      <span className="prodTitle">{cart?.name}</span>
                       <span className="prodCategory">{cart?.category}</span>
                       <div
                         className="deleteProd"
@@ -88,7 +87,7 @@ export const Bag = () => {
                       value={cart?.quantity}
                     />
 
-                    <button onClick={() => handleInc(cart?.id)}>+</button>
+                    <button onClick={() => handleInc(cart)}>+</button>
                   </div>
                   <span className="price">${(cart?.price).toFixed(2)}</span>
                   <span className="price">
@@ -107,8 +106,8 @@ export const Bag = () => {
             <h2>Order Summary</h2>
           </div>
           <div className="summaryDetails">
-            <span className="itemsAmount">ITEMS {carts?.length}</span>
-            <span className="itemsPrice">{totalPrice.toFixed(2)}$</span>
+            <span className="itemsAmount">ITEMS {totalQuantity}</span>
+            <span className="itemsPrice">{totalCost.toFixed(2)}$</span>
           </div>
           <div>
             <label className="Shipping">Shipping</label>
@@ -121,13 +120,13 @@ export const Bag = () => {
             <label>Example: SALE</label>
             <input type="text" id="promo" placeholder="Enter your code" />
           </div>
-          <button className="ApplyButton" onClick={() => promoCode()}>
+          <button className="ApplyButton">
             Apply
           </button>
           <div className="totalCost">
             <div className="itemsCost">
               <span>Total cost</span>
-              <span>{(totalPrice + 10).toFixed(2)}$</span>
+              <span>{(totalCost + 10).toFixed(2)}$</span>
             </div>
             <button>CHECKOUT</button>
           </div>

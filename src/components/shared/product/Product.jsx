@@ -3,7 +3,8 @@ import axios from "axios";
 import { useParams } from "react-router";
 import "./product.css";
 import { url } from "../../../App.js";
-import { handleCart } from "../../../features/HandleCard";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../redux/cartSlice";
 
 export const Product = () => {
   const { id } = useParams();
@@ -16,6 +17,21 @@ export const Product = () => {
       setProduct(response.data);
     });
   }, []);
+
+  const dispatch = useDispatch();
+
+  const addToBag = () => {
+    dispatch(
+      addToCart({
+        id: product.id,
+        name: product.title,
+        price: product.price,
+        image: product.image,
+        category: product.category,
+      })
+    );
+    alert("Product added to cart");
+  };
 
   const handleAmountChange = (e) => {
     setAmount(Number(e.target.value));
@@ -47,10 +63,7 @@ export const Product = () => {
               value={amount}
               onChange={handleAmountChange}
             />
-            <button
-              className="addToBasket"
-              onClick={() => handleCart(product, amount)}
-            >
+            <button className="addToBasket" onClick={addToBag}>
               В корзину
             </button>
           </div>

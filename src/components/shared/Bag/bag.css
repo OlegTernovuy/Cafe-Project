@@ -294,6 +294,7 @@ p {
   text-transform: uppercase;
   background-color: #ef4444;
   border: none;
+  cursor: pointer;
 }
 
 .ApplyButton:hover {
