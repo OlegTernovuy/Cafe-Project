@@ -15,6 +15,7 @@ export const Products = ({ products = [] }) => {
         price: product.price,
         image: product.image,
         category: product.category,
+        quantity: 1
       })
     );
     alert("Product added to cart");

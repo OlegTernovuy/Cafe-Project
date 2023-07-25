@@ -8,7 +8,8 @@ import { ModalProvider } from "./components/providers/ModalProvider";
 import { ModalNavigation } from "./components/providers/ModalProvider";
 
 import { Provider } from "react-redux";
-import store from "./redux/store";
+import { PersistGate } from "redux-persist/integration/react";
+import store, { persistor } from "./redux/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,7 +18,9 @@ root.render(
     <ModalNavigation>
       <BrowserRouter>
         <Provider store={store}>
-          <App />
+          <PersistGate loading={null} persistor={persistor}>
+            <App />
+          </PersistGate>
         </Provider>
       </BrowserRouter>
     </ModalNavigation>

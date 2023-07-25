@@ -28,9 +28,11 @@ export const Product = () => {
         price: product.price,
         image: product.image,
         category: product.category,
+        quantity: amount,
       })
     );
     alert("Product added to cart");
+    console.log();
   };
 
   const handleAmountChange = (e) => {

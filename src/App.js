@@ -21,7 +21,6 @@ function App() {
   const { showReservTableModal, handleHideReservTableModal } =
     useContext(ModalContext);
   const cartItems = useSelector((state) => state.cart.itemsList);
-  console.log(cartItems);
   return (
     <div className="App">
       {showReservTableModal && (
