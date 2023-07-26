@@ -3,13 +3,14 @@ import axios from "axios";
 import { useParams } from "react-router";
 import "./product.css";
 import { url } from "../../../App.js";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../../../redux/cartSlice";
+import { useAction } from "../../../features/hooks/useAction";
 
 export const Product = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   const [amount, setAmount] = useState(1);
+
+  const { addToCart } = useAction();
 
   useEffect(() => {
     // eslint-disable-next-line
@@ -18,27 +19,21 @@ export const Product = () => {
     });
   }, []);
 
-  const dispatch = useDispatch();
-
   const addToBag = () => {
-    dispatch(
-      addToCart({
-        id: product.id,
-        name: product.title,
-        price: product.price,
-        image: product.image,
-        category: product.category,
-        quantity: amount,
-      })
-    );
+    addToCart({
+      id: product.id,
+      name: product.title,
+      price: product.price,
+      image: product.image,
+      category: product.category,
+      quantity: amount,
+    });
     alert("Product added to cart");
-    console.log();
   };
 
   const handleAmountChange = (e) => {
     setAmount(Number(e.target.value));
   };
-  // console.log('amount', amount, typeof(amount));
 
   if (!Object.keys(product).length > 0) return <div>Product Not Found</div>;
   return (

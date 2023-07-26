@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./bag.css";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  addToCart,
-  deleteFromCart,
-  removeFromCart,
-} from "../../../redux/cartSlice";
+import { useItemList } from "../../../features/hooks/useItemList";
+import { useAction } from "../../../features/hooks/useAction";
 
 export const Bag = () => {
+  const { addToCart, removeFromCart, deleteFromCart } = useAction();
 
-  const dispatch = useDispatch();
+  const { itemsList } = useItemList();
 
-  const itemsList = useSelector((state) => state.cart.itemsList);
-
-  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  const { totalQuantity } = useItemList();
 
   let totalCost = 0;
 
@@ -23,23 +18,21 @@ export const Bag = () => {
   });
 
   const handleInc = (product) => {
-    dispatch(
-      addToCart({
-        id: product.id,
-        name: product.title,
-        price: product.price,
-        image: product.image,
-        category: product.category,
-      })
-    );
+    addToCart({
+      id: product.id,
+      name: product.title,
+      price: product.price,
+      image: product.image,
+      category: product.category,
+    });
   };
 
   const handleDec = (id) => {
-    dispatch(removeFromCart(id));
+    removeFromCart(id);
   };
 
   const removeProduct = (id) => {
-    dispatch(deleteFromCart(id));
+    deleteFromCart(id);
   };
 
   // if(!carts.length) return <div>Cart is Empty</div>
@@ -120,9 +113,7 @@ export const Bag = () => {
             <label>Example: SALE</label>
             <input type="text" id="promo" placeholder="Enter your code" />
           </div>
-          <button className="ApplyButton">
-            Apply
-          </button>
+          <button className="ApplyButton">Apply</button>
           <div className="totalCost">
             <div className="itemsCost">
               <span>Total cost</span>

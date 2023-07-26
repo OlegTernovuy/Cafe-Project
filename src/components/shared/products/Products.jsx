@@ -1,23 +1,20 @@
 import React from "react";
 import "./products.css";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../../../redux/cartSlice";
+import { useAction } from "../../../features/hooks/useAction";
 
 export const Products = ({ products = [] }) => {
-  const dispatch = useDispatch();
+  const { addToCart } = useAction();
 
   const addToBag = (product) => {
-    dispatch(
-      addToCart({
-        id: product.id,
-        name: product.title,
-        price: product.price,
-        image: product.image,
-        category: product.category,
-        quantity: 1
-      })
-    );
+    addToCart({
+      id: product.id,
+      name: product.title,
+      price: product.price,
+      image: product.image,
+      category: product.category,
+      quantity: 1,
+    });
     alert("Product added to cart");
   };
 

@@ -16,7 +16,7 @@ import storage from "redux-persist/lib/storage";
 const persistConfig = {
   key: "root",
   storage,
-//   blacklist: ['cart']
+  //   blacklist: ['cart']
 };
 
 const rootReducer = combineReducers({

@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export const Delivery = () => {
-  return (
-    <div>Delivery</div>
-  )
-}
+  return <div>Delivery</div>;
+};
